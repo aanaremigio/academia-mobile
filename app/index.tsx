@@ -1,5 +1,18 @@
 import { Text, View, StyleSheet } from "react-native";
 
+const usuario = [
+  {
+    id: 1,
+    nome: "Ana Lívia",
+    cargo: "Aluna"
+  }
+  {
+    id: 2,
+    nome: "Cicinho",
+    cargo: "Professor"
+  }
+]
+
 export default function Index() {
   return (
     <View
@@ -9,7 +22,12 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>I LOOOVE, I LOOOOOOVE, I LOOVE, I LOOVE, I LOOVE!</Text>
+      {
+        usuario.map(item => (
+          <Text>{item.nome}</Text>
+
+        ))
+      }   
     </View>
   );
 }
@@ -20,4 +38,4 @@ const style = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   }
-})
+});
